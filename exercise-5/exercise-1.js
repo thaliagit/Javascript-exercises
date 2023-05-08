@@ -4,9 +4,11 @@ const person1 = {
   age: 25,
 };
 
-let person2 = person1;
-
+const person2 = person1;
+person2.firstName = "Simon";
 // Modify the property `firstName` of the `person2` in "Simon".
 
 console.log(person1);
 console.log(person2);
+//object person2 is a reference to the object person1
+//and therefore modifying one of them will result in modifying the other
