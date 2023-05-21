@@ -1,5 +1,13 @@
 function uncompletedNotes(notes) {
-  // ...
+  let filtered = [];
+  notes.forEach((o) => {
+    let list = o.todos;
+    filtered = list.filter((e) => {
+      return e.done == false;
+    });
+    console.log(filtered);
+  });
+
 }
 
 const notes = [
