@@ -1,6 +1,10 @@
-function sum(num1, num2, num3) {
-  return num1 + num2 + num3;
+function sum(...numbers) {
+  let total = 0;
+  for(let i =0; i < numbers.length; i++){
+    total += numbers[i];
+  }
+  return total;
 }
 
 const numbers = [1, 2, 3];
-console.log(sum(numbers[0], numbers[1], numbers[2]));
+console.log(sum(...numbers));
