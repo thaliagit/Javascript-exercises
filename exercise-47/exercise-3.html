@@ -20,5 +20,10 @@
 </html>
 
 <script>
-  // code here
+  let inputVal = document.getElementsByClassName('form-input')
+  const array = Array.from(inputVal); //it converts an array-like collection into an actual array
+  array.forEach((e) => {
+    let label = e.previousElementSibling.innerText
+    console.log(`${label} ${e.value}`)
+  })
 </script>

@@ -5,5 +5,28 @@
 </html>
 
 <script>
-  // code here
+  let url = "https://jsonplaceholder.typicode.com/todos/4";
+  async function getUrl() {
+    const res = await fetch(url);
+    const data = await res.json();
+    const dataTitle = data.title;
+    let isCompleted = data.completed;
+    console.log(data);
+    let hEl = document.createElement('h2')
+    let checkbox = document.createElement('input')
+    checkbox.setAttribute('type', 'checkbox')
+    checkbox.checked = isCompleted;
+    hEl.innerText = dataTitle;
+    let parentDiv = document.getElementById('container');
+    parentDiv.append(hEl, checkbox)
+    
+    // if(isCompleted === true){
+    //   checkbox.checked = true;
+    // }else{
+    //   checkbox.checked = false;
+    // }
+  }
+  
+
+  getUrl();
 </script>

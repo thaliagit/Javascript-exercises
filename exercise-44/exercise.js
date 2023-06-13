@@ -3,3 +3,8 @@ const user = {
   name: "John",
   age: 25,
 };
+
+localStorage.setItem('user', JSON.stringify(user));
+
+let userParsed = JSON.parse(localStorage.getItem('user'));
+console.log(userParsed)

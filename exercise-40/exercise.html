@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script>
+  async function getUrl(){
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+    const res = await fetch(url);
+    const data = await res.json();
+    let ul = document.createElement('ul')
+    //ul.setAttribute('class', 'todo-list')
+    let div = document.getElementById('container');
+    div.appendChild(ul)
+    //console.log(res)
+    data.forEach(el => {
+      let title = el.title;
+      let li = document.createElement('li')
+      ul.append(li)
+      li.innerText = title;
+      
+    });
+   
+
+  }
+
+  getUrl()
+</script>

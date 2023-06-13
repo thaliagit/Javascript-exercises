@@ -20,5 +20,11 @@
 </html>
 
 <script>
-  // code here
+  let inp = document.querySelectorAll(".form-input");
+  inp.forEach((e) => {
+    if (e.type === "text") {
+      let val = e.value;
+      console.log(val);
+    }
+  });
 </script>
